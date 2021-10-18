@@ -4,14 +4,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header/Header';
 import Home from './components/pages/Home/Home';
 import Services from './components/pages/Services/Services';
-import About from './components/pages/Contact/About/About';
-import Contact from './components/pages/Contact/Contact';
+import Servicedetails from './components/pages/Services/Servicedetails/ServiceDetail';
+import Article from './components/Article/Article';
+import Footer from './components/Footer/Footer';
+import Contact from './components/pages/Contact/Contact/Contact';
 function App() {
   return (
     <Router>
        <Header></Header>
-      <Switch>
-       
+
+      <Switch>      
         <Route exact path="/">
           <Home></Home>
         </Route>
@@ -22,14 +24,21 @@ function App() {
           <Services>
           </Services>
         </Route>
-        <Route exact path="/about">
-          <About></About>
+        <Route exact path="/serviceDetails/:serviceId">
+        <Servicedetails></Servicedetails>
         </Route>
+        
         <Route exact path="/contact">
           <Contact></Contact>
         </Route>
 
+        <Route exact path="/article">
+          <Article></Article>
+          </Route>
+ 
       </Switch>
+      
+  <Footer></Footer>
     </Router>
   );
 }

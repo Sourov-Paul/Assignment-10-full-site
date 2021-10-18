@@ -62,6 +62,24 @@
     "rating":3,
     "counrty":"Rajshahi",
     "img":"https://images.medicinenet.com/images/image_collection/webmd_anatomy/skin-anatomy.jpg"
+    },
+    {
+    "doctorName":"Dr. Krishna Saha" ,
+    "id":888,
+    "catagory":"Hear Specialist",
+    "description":"Don't have time for intensive skin care? You can still pamper yourself by acing the basics. Good skin care and healthy lifestyle choices can help delay natural aging and prevent various skin problems. Get started with these five no-nonsense tips.",
+    "rating":3,
+    "counrty":"Rajshahi",
+    "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIvLv3L-0Vs7kSmPNxt80YfwqQKA95kw9MLg&usqp=CAU"
+    },
+    {
+    "doctorName":"Dr. Muskan Islam" ,
+    "id":999,
+    "catagory":"Hear Specialist",
+    "description":"The meaning of health has evolved over time. In keeping with the biomedical perspective, early definitions of health focused on the theme of the body's ability to function; health was seen as a state of normal function that could be disrupted from time to time by disease.",
+    "rating":3,
+    "counrty":"Rajshahi",
+    "img":"https://static.toiimg.com/photo/msid-76714980/76714980.jpg?1422821"
     }
 
 ]

@@ -1,0 +1,13 @@
+.main_container.text-center.mt-5 {
+    padding: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+.main_heading p{
+    font-family: 'Poppins', sans-serif;
+
+}
+.onli_d{
+   font-size: 50px;
+   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   color: rgb(252, 91, 91);
+}
