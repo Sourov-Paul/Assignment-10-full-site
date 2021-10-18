@@ -11,11 +11,15 @@ import Contact from "./components/pages/Contact/Contact/Contact";
 import initializeAuthentication from "./Firebase/firebase.initilize";
 import Login from "./Login/Login";
 import Register from "./Register/Register";
+import AuthProvider from "./components/context/AuthProvider";
+import PrivetRoute from './components/PrivetRoute/PrivetRoute';
 initializeAuthentication();
 
 function App() {
   return (
-    <Router>
+   <div>
+     <AuthProvider>
+     <Router>
       <Header></Header>
 
       <Switch>
@@ -25,9 +29,9 @@ function App() {
         <Route exact path="/home">
           <Home></Home>
         </Route>
-        <Route exact path="/services">
+        <PrivetRoute exact path="/services">
           <Services></Services>
-        </Route>
+        </PrivetRoute>
         <Route exact path="/serviceDetails/:serviceId">
           <Servicedetails></Servicedetails>
         </Route>
@@ -49,6 +53,8 @@ function App() {
 
       <Footer></Footer>
     </Router>
+     </AuthProvider>
+   </div>
   );
 }
 

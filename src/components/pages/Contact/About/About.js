@@ -1,12 +1,16 @@
 import React from "react";
+import useAuth from "../../../../hooks/useAuth";
 import './About.css'
 const About = () => {
+  const{person}=useAuth();
   return (
     <div className="main_service_quality">
       <div className="container p-5 ">
         <div className="row">
             <h1 className="text-center service_quality">Service Quality</h1>
-          <div className="col-12 col-sm-12 col-md-6 col-lg-4">
+{ person.email?<span> </span>:
+  <span className="text-center service_quality">login and see our services</span>
+}          <div className="col-12 col-sm-12 col-md-6 col-lg-4">
             <div className="card">
               <img src="https://image.freepik.com/free-photo/doctor-nurses-special-equipment_23-2148980721.jpg" className="card-img-top" alt="..." />
               <div className="card-body">
