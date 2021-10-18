@@ -1,19 +1,24 @@
-import './App.css';
-import { BrowserRouter as Router,Switch,Route } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './components/Header/Header';
-import Home from './components/pages/Home/Home';
-import Services from './components/pages/Services/Services';
-import Servicedetails from './components/pages/Services/Servicedetails/ServiceDetail';
-import Article from './components/Article/Article';
-import Footer from './components/Footer/Footer';
-import Contact from './components/pages/Contact/Contact/Contact';
+import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Header from "./components/Header/Header";
+import Home from "./components/pages/Home/Home";
+import Services from "./components/pages/Services/Services";
+import Servicedetails from "./components/pages/Services/Servicedetails/ServiceDetail";
+import Article from "./components/Article/Article";
+import Footer from "./components/Footer/Footer";
+import Contact from "./components/pages/Contact/Contact/Contact";
+import initializeAuthentication from "./Firebase/firebase.initilize";
+import Login from "./Login/Login";
+import Register from "./Register/Register";
+initializeAuthentication();
+
 function App() {
   return (
     <Router>
-       <Header></Header>
+      <Header></Header>
 
-      <Switch>      
+      <Switch>
         <Route exact path="/">
           <Home></Home>
         </Route>
@@ -21,24 +26,28 @@ function App() {
           <Home></Home>
         </Route>
         <Route exact path="/services">
-          <Services>
-          </Services>
+          <Services></Services>
         </Route>
         <Route exact path="/serviceDetails/:serviceId">
-        <Servicedetails></Servicedetails>
+          <Servicedetails></Servicedetails>
         </Route>
-        
+
         <Route exact path="/contact">
           <Contact></Contact>
         </Route>
 
         <Route exact path="/article">
           <Article></Article>
-          </Route>
- 
+        </Route>
+        <Route exact path="/login">
+          <Login></Login>
+        </Route>
+        <Route exact path="/register">
+          <Register></Register>
+        </Route>
       </Switch>
-      
-  <Footer></Footer>
+
+      <Footer></Footer>
     </Router>
   );
 }
