@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import "./Register.css";
 const Register = () => {
-  const { person, signInWithGoogle,handleRegistation,handleEmailChange,handlePasswordChange,error } = useAuth();
+  const {signInWithGoogle,handleRegistation,handleEmailChange,handlePasswordChange,error } = useAuth();
 
   return (
     <div className="container ">
       <div className="main_register">
         <h2 className="text-center">Please Registation here</h2>
         <form onSubmit={handleRegistation}>
-          <h5 className="text-email">EmAIL: </h5>
+          <h5 className="text-email">Email: </h5>
           <input
           className="email"
           required
