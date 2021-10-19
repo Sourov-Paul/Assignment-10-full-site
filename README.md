@@ -5,7 +5,7 @@
 <li> Here is treated with utmost care.</li>
 <li> All the doctors from home and abroad are here.</li>
 <li> 20k+ happy clients 5 star revew </li>
-<li>Live Link: https://health-care-882d2.web.app/services </li>
+<li>Live Link: https://health-care-882d2.web.app/ </li>
 
 
 
