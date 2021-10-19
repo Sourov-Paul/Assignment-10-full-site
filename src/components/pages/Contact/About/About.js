@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import useAuth from "../../../../hooks/useAuth";
 import './About.css'
 const About = () => {
@@ -18,7 +19,7 @@ const About = () => {
                 <p className="card-text">
                 We are given the best treatment in the world here. Doctors are very intelligent and honest. All patients recover very quickly.
                 </p>
-                <button type="button" className="btn btn-outline-success">Let's Started</button>
+                <button type="button" className="btn btn-outline-success"> <Link to="/service">{person.email? <Link to="/services"> Let's Started</Link>:<Link to="/login">Let's Started</Link>}</Link> </button>
               </div>
             </div>
           </div>
@@ -30,7 +31,7 @@ const About = () => {
                 <p className="card-text">
                 We are given all kinds of medical facilities. Everyone is very happy with our service and the patients get well very quickly.
                 </p>
-                <button type="button" className="btn btn-outline-success">Let's Started</button>
+                <button type="button" className="btn btn-outline-success"><Link to="/service">{person.email? <Link to="/services"> Let's Started</Link>:<Link to="/login">Let's Started</Link>}</Link></button>
               </div>
             </div>
           </div>
@@ -42,7 +43,7 @@ const About = () => {
                 <p className="card-text">
                 We provide you with 24 hours service. Patients are served here with great care.
                 </p>
-                <button type="button" className="btn btn-outline-success">Let's Started</button>
+                <button type="button" className="btn btn-outline-success">{person.email? <Link to="/services"> Let's Started</Link>:<Link to="/login">Let's Started</Link>}</button>
               </div>
             </div>
           </div>

@@ -1,0 +1,24 @@
+.main_register {
+    background: #f3fcff;
+    margin: 40px 0;
+    padding: 20px;
+    cursor: pointer;
+    line-height: 30px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 18px black;
+}
+.main_register:hover{
+    box-shadow: 1px 1px 18px green;
+    transition: all 0.5s;
+}
+input.email,input.password {
+    border: none;
+    padding: 2px 2px 2px 15px;
+    border-radius: 5px;
+    width: 100%;
+    margin: 10px 0px;
+}
+a.login_move {text-decoration: none;}
+form{
+    width: 50%;
+}

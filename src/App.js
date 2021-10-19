@@ -13,6 +13,7 @@ import Login from "./Login/Login";
 import Register from "./Register/Register";
 import AuthProvider from "./components/context/AuthProvider";
 import PrivetRoute from './components/PrivetRoute/PrivetRoute';
+import NotFound from './components/Notfound/NotFound';
 initializeAuthentication();
 
 function App() {
@@ -48,6 +49,9 @@ function App() {
         </Route>
         <Route exact path="/register">
           <Register></Register>
+        </Route>
+        <Route  path="*">
+          <NotFound></NotFound>
         </Route>
       </Switch>
 

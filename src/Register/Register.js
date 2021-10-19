@@ -1,46 +1,52 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import useFirebase from '../hooks/useFirebase';
-import "./Register.css"
+import React from "react";
+import { Link } from "react-router-dom";
+import useAuth from "../hooks/useAuth";
+import "./Register.css";
 const Register = () => {
-    const{person,signInWithGoogle}=useFirebase();
+  const { person, signInWithGoogle,handleRegistation,handleEmailChange,handlePasswordChange,error } = useAuth();
 
-    return (
-        <div>
-                     <div>
-                     <h2>Register</h2>
-            <form onSubmit="">
-          <span>Emial</span> <br />
+  return (
+    <div className="container ">
+      <div className="main_register">
+        <h2 className="text-center">Please Registation here</h2>
+        <form onSubmit={handleRegistation}>
+          <h5 className="text-email">Emial: </h5>
           <input
+          className="email"
+          required
+          onBlur={handleEmailChange}
             type="email"
             name="email"
             placeholder="Enter Your Email"
             id=""
           />
+          
           <br />
-          <span>Password</span> <br />
+          <h5  className="text-password">Password: </h5>
           <input
+          className="password"
+          required
+          onBlur={handlePasswordChange}
             type="password"
             name="password"
             placeholder="Enter Your Password"
             id=""
           />
+         
           <br />
-          <input
-            type="password"
-            name="password"
-            placeholder="Re-Enter Your Password"
-            id=""
-          />
-          <br />
-          <input type="submit" value="Submit" />
+          <input className="register_btn border-0" type="submit" value="Register" />
         </form>
-        <p>Already Have an Account <Link to="/login"> Login</Link></p>
-        <div>--------or------</div>
-        <button onClick={signInWithGoogle} className="btn-regular">Google Sign In</button>
-                     </div>
-        </div>
-    );
+        <span className="text-danger"> {error}</span>
+        <p>
+          Already Have an Account <Link to="/login" className="login_move"> Login</Link>
+        </p>
+        <div className="border"></div>
+        <button onClick={signInWithGoogle} className="btn btn-regular">
+          Google Sign In
+        </button>
+      </div>
+    </div>
+  );
 };
 
 export default Register;
