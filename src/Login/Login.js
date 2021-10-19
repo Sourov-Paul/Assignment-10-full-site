@@ -4,7 +4,7 @@ import useAuth from '../hooks/useAuth';
 import "./Login.css"
 
 const Login = () => {
-    const{signInWithGoogle,handleRegistation,error}=useAuth();
+    const{signInWithGoogle,handleRegistation,error,handleEmailChange,handlePasswordChange}=useAuth();
 
 const location=useLocation();
 const histry=useHistory();
@@ -29,6 +29,7 @@ const handelGoogleLogIn=()=>{
              required
             type="email"
             name="email"
+            onBlur={handleEmailChange}
             placeholder="Enter Your Email"
             id=""
           />
@@ -36,6 +37,7 @@ const handelGoogleLogIn=()=>{
           <h5  className="text-password">Password: </h5>
           <input
            className="password"
+           onBlur={handlePasswordChange}
             type="password"
             name="password"
             placeholder="Enter Your Password"

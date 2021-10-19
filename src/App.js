@@ -41,9 +41,9 @@ function App() {
           <Contact></Contact>
         </Route>
 
-        <Route exact path="/article">
+        <PrivetRoute exact path="/article">
           <Article></Article>
-        </Route>
+        </PrivetRoute>
         <Route exact path="/login">
           <Login></Login>
         </Route>

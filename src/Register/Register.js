@@ -10,7 +10,7 @@ const Register = () => {
       <div className="main_register">
         <h2 className="text-center">Please Registation here</h2>
         <form onSubmit={handleRegistation}>
-          <h5 className="text-email">Emial: </h5>
+          <h5 className="text-email">EmAIL: </h5>
           <input
           className="email"
           required

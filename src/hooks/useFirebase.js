@@ -57,6 +57,7 @@ const handleRegistation=(e)=>{
     createUserWithEmailAndPassword (auth,email,password)
     .then(result=>{
         const users=result.user;
+        console.log(users)
         setError("")
       
     })
@@ -89,7 +90,7 @@ setPerson({})
         }
     })
       
-   }, [])
+   }, [auth])
 
 
 return{
