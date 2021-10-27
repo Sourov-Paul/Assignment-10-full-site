@@ -9,3 +9,25 @@ ul li{
 ul li:hover{
     color:rgb(207, 198, 198)
 }
+ul li:hover > .facebook{
+    color: rgb(66, 69, 247);
+}
+ul li:hover > .instagram{
+    color: rgb(228, 125, 66);
+}
+ul li:hover > .linkedin{
+    color: rgb(9, 49, 94);
+}
+ul li:hover > .whatsapp{
+    color: rgb(85, 233, 146);
+}
+.love{
+    color:rgb(204, 70, 70)
+}
+
+/* footer_div */
+
+.footer_div{
+    background-color: #084298;
+    font-family: 'Rampart One', cursive;
+}

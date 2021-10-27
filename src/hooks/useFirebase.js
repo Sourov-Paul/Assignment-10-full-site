@@ -12,16 +12,24 @@ const [password,setPassword]=useState('');
 
 // error massage
 const[error,setError]=useState('')
+
+// Loading
+const [isLoading,setIsLoading]=useState(true)
+
+
    const auth=getAuth();          
    const googleProvider = new GoogleAuthProvider();
 
 
    const signInWithGoogle=()=>{
+    setIsLoading(true)
      return (
+     
       signInWithPopup(auth,googleProvider)
       .catch(error=>{
         setError(error.massage);
     })
+    .finally(()=> setIsLoading(false))
      ) 
        
    }
@@ -36,16 +44,16 @@ const handleRegistation=(e)=>{
         setError('Password Must Be at last 8 Characters long.')
         return
          }
-       if (!/(?=.*[A-Z].*[A-Z])/.test(password)){
-         setError("Password Must content 2 upper Case (A/B/C)")
+       if (!/(?=.*[A-Z])/.test(password)){
+         setError("Password Must content 1 upper Case (A/B/C)")
          return
        }
-       if (!/(?=.*[a-z].*[a-z].*[a-z])/.test(password)){
+       if (!/(?=.*[a-z])/.test(password)){
          setError("Password Must content 2 Lower Case (a/b/c/d)")
          return
        }
-       if (!/(?=.*[0-9].*[0-9])/.test(password)){
-         setError("Password Must content 2 Number (1/2/3)")
+       if (!/(?=.*[0-9])/.test(password)){
+         setError("Password Must content 1 Number (1/2/3)")
          return
        }
        if (!/(?=.*[!@#$&])/.test(password)){
@@ -76,10 +84,12 @@ const handlePasswordChange=(e)=>{
 // SIGNOUT============
 
  const logOut=()=>{
+  setIsLoading(true)
      signOut(auth)
      .then(()=>{
 setPerson({})
      })
+     .finally(()=> setIsLoading(false));
  }
 
 
@@ -88,9 +98,13 @@ setPerson({})
         if(user){
             setPerson(user);
         }
+        else{
+          setPerson({})
+        }
+        setIsLoading(false)
     })
       
-   }, [auth])
+   }, [])
 
 
 return{
@@ -100,7 +114,8 @@ return{
     handleRegistation,
     handleEmailChange,
     handlePasswordChange,
-    error
+    error,
+    isLoading
 
 
 }

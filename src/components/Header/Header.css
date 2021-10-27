@@ -14,3 +14,21 @@
 .profilrIcon:hover{
     color:rgb(96, 154, 209)
 }
+.login{
+    color: rgb(61, 112, 221);
+}
+.login:hover{
+    color: rgb(33, 76, 168);
+
+}
+.logout{
+    color: rgb(61, 112, 221);
+
+}
+.fa-user-circle{
+    color: cadetblue;
+    font-size: 20px;
+}
+.fa-user-md{
+    color: #0dcaf0;
+}

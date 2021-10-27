@@ -8,9 +8,9 @@ const Register = () => {
   return (
     <div className="container ">
       <div className="main_register">
-        <h2 className="text-center">Please Registation here</h2>
+        <h2 className="text-center"><i class="far fa-registered"></i> Please Registation here</h2>
         <form onSubmit={handleRegistation}>
-          <h5 className="text-email">Email: </h5>
+          <h5 className="text-email"><i class="email_icon m-1 far fa-envelope"></i> Email: </h5>
           <input
           className="email"
           required
@@ -22,7 +22,7 @@ const Register = () => {
           />
           
           <br />
-          <h5  className="text-password">Password: </h5>
+          <h5  className="text-password"><i class="password_icon m-1 fas fa-unlock-alt"></i>Password: </h5>
           <input
           className="password"
           required
@@ -42,7 +42,7 @@ const Register = () => {
         </p>
         <div className="border"></div>
         <button onClick={signInWithGoogle} className="btn btn-regular">
-          Google Sign In
+        <i class="m-1 google_icon fab fa-google-plus-g"></i>  Google Sign In
         </button>
       </div>
     </div>

@@ -23,3 +23,42 @@ a.login_move {text-decoration: none;}
 form{
     width: 50%;
 }
+.login_here{
+    font-size: 30px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(46, 43, 43);
+}
+.sign-in{
+    color: rgb(47, 206, 94);
+    font-size: 25px;
+}
+.email_icon{
+    color: cadetblue;
+    
+}
+.text-email,.email{
+    font-family:cursive;
+}
+.password_icon{
+    color:cadetblue
+}
+.password,.text-password{
+    font-family:cursive;
+}
+
+/* register_btn */
+.register_btn{
+    font-family:cursive ;
+    color: white;
+    background-color: rgb(75, 115, 226);
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+.google{
+    color: rgb(59, 55, 55);
+    font-weight: bold;
+}
+.google_icon{
+font-size: 20px;
+color: rgb(211, 17, 17);
+}

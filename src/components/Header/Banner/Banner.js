@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Banner.css"
-
+import Typewriter from "typewriter-effect";
 
 
 
@@ -9,8 +9,21 @@ const Banner = () => {
         <div className="main_banner">
             <div className="main_title">
                 <div className="title ">
-                   <h2>
-                   Department of Health Services
+                   <h2 className="animated">
+                       <Typewriter
+                       options={{
+                          autoStart:true,
+                          loop:true,
+                          delay:40,
+                          strings:[
+                              "Hello Everyone",
+                              "We are provide well service",
+                              "Department of Health Services",
+                              "Happy Customar"
+                          ]
+                       }}
+                       />
+                   
 
                    </h2>
                    <p>The overall purpose of the Department of Health Services (DoHS) is to deliver preventive, promotive and curative health services throughout nepal. The DoHS is one of three departments under Ministry of Health & Population(</p>

@@ -22,3 +22,14 @@ a.login_move {text-decoration: none;}
 form{
     width: 50%;
 }
+.google_icon{
+    font-size: 20px;
+    color: rgb(211, 17, 17);
+}
+.fa-registered{
+color: rgb(18, 196, 107);
+}
+    .email_icon,.password_icon{
+        color: cadetblue;
+        
+    }

@@ -14,14 +14,14 @@ label {
 }
 
 input#fname,input#lname,textarea#report,select#country {
-    width: 50%;
+  width: 100%;
     border: none;
     border-radius: 5px;
     padding: 3px 10px;
 }
 input.submition_btn {
     border: none;
-    width: 50%;
+    width: 100%;
     background-image: linear-gradient(to right, rgba(255,0,0,0), #075e62);
 color: white;
 font-weight: bold;

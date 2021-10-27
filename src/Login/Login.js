@@ -20,9 +20,9 @@ const handelGoogleLogIn=()=>{
     return (
         <div className=" container login-form">
 <div className="main_register">
-<h2 className="text-center login_here">Login</h2>
+<h2 className="text-center login_here"><i className="m-2 sign-in fas fa-sign-in-alt"></i>Login</h2>
             <form onSubmit={handleRegistation}>
-            <h5 className="text-email">Emial: </h5>
+            <h5 className="text-email"><i class="email_icon m-1 far fa-envelope"></i>Email: </h5>
 
           <input
              className="email"
@@ -34,7 +34,7 @@ const handelGoogleLogIn=()=>{
             id=""
           />
           <br />
-          <h5  className="text-password">Password: </h5>
+          <h5  className="text-password"><i class="password_icon m-1 fas fa-unlock-alt"></i>Password: </h5>
           <input
            className="password"
            onBlur={handlePasswordChange}
@@ -50,10 +50,10 @@ const handelGoogleLogIn=()=>{
         <div className="border"></div>
         <p> <Link  className="login_move" to="/register">Create Accounr</Link></p>
         <div className="bprder"></div>
-        <button onClick={handelGoogleLogIn} className="btn btn-regular">Google Sign In</button>
+        <button onClick={handelGoogleLogIn} className="btn btn-regular google">
+<i class="m-1 google_icon fab fa-google-plus-g"></i> Google Sign In</button>
 </div>
         </div>
     );
 };
-
 export default Login;
